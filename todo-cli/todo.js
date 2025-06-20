@@ -21,15 +21,16 @@ const todoList = () => {
     return all.filter((todo) => todo.dueDate > today);
   };
 
-  const toDisplayableList = (list) => {
-    return list
-      .map((todo) => {
-        const checkbox = todo.completed ? "[x]" : "[ ]";
-        const displayDate = todo.dueDate === today ? "" : ` ${todo.dueDate}`;
-        return `${checkbox} ${todo.title}${displayDate}`;
-      })
-      .join("\n");
-  };
+const toDisplayableList = (list) => {
+  return list
+    .map((item) => {
+      const checkbox = item.completed ? "[x]" : "[ ]";
+      const displayDate = item.dueDate === formattedDate(new Date()) ? "" : ` ${item.dueDate}`;
+      return `${checkbox} ${item.title}${displayDate}`;
+    })
+    .join("\n");
+};
+
 
   return {
     all,

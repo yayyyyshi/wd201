@@ -2,5 +2,8 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8"
   }
 }
